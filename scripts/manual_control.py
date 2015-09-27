@@ -6,8 +6,7 @@ from sensor_msgs.msg import Joy
 
 def callback(data):
 	twist = Twist()
-
-
+	# turns input to vector output
 	twist.linear.y = data.axis[1]
 	twist.linear.x = data.axis[0]
 	if data.buttons[0]:
