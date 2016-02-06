@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find seabee_imu_driver)/seabee_imu_driver.launch" />
+	<node name="manual_control" pkg="manual_control" type="manual_control.py" />
+</launch>
