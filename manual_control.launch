@@ -1,4 +1,6 @@
 <launch>
-	<include file="$(find seabee_imu_driver)/seabee_imu_driver.launch" />
-	<node name="manual_control" pkg="manual_control" type="manual_control.py" />
+  <include file="$(find seabee_imu_driver)/seabee_imu_driver.launch" />
+  <include file="$(find base_controller)/base.launch" />
+  <node name="joy" pkg="joy" type="joy_node" />
+  <node name="manual_control" pkg="manual_control" type="manual_control.py" />
 </launch>
